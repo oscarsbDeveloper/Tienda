@@ -1,10 +1,60 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 25 may. 2022, 23:39:20
-    Author     : hades
-*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow: hidden;
+    background-color:  	#20B2AA;
+}
+
+.center{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width: 400px;
+    background:white;
+    transform:translate(-50%,-50%);
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0.0.0.0.05);
+}
+
+.center h1{
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid silver;
+}
+
+.cente form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+form .txt_field{
+    position: relative;
+    border-bottom: 2px solid silver;
+    margin: 30px 0;
+}
+
+.txt_field label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translate(-50%);
+    font-size: 16px;
+}
+
+.txt_field input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 40px;
+    border: none;
+    background: none;
+}
+
 
