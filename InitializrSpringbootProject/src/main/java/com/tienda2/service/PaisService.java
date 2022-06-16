@@ -5,9 +5,10 @@ import com.tienda2.entity.Pais;
 import com.tienda2.repository.PaisRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-
-public class PaisService {
+@Service
+public class PaisService implements IPaisService{
     @Autowired
     private PaisRepository paisRepository;
     
