@@ -1,5 +1,7 @@
 
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://thymeleaft.org/extras/spring-security">
+
     <head th:fragment="head">
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
@@ -26,7 +28,15 @@
                     </div>
                 </div>
             </nav>
-
+            <li sec:authorize="isAuthenticated()"class="nav-item">
+                <a class+"nav-link" href="#" th:href+"@{~/admin/index}"></a>
+            </li>
+            <li sec:authorize="hasRole('ROLE_USER')"class="nav-item">
+                <a class+"nav-link" href="#" th:href+"@{~/management/index}">USER</a>
+            </li>
+            <li sec:authorize="hasAnyRole('ROLE_USER')"class="nav-item">
+                <a class+"nav-link" href="#" th:href+"@{~/management/index}">ADMIN</a>
+            </li>
             <footer th:fragment="footer" class="bg-dark text-white fixed-bottom">
                 <div>
                    <p>Copyright Tienda &copy; 2022</p>  

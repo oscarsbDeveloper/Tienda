@@ -44,10 +44,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
         return daoAuthenticationProvider;
     }
     
-    /*@Bean
+    @Bean
     public AuthenticationSuccessHandler appAuthenticationSuccess(){
         return new AppAuthenticationSuccessHandler();
-    }*/
+    }
     
     public SecurityConfig(UserService userPrincipalDetailsService){
         this.userDetailsService = userPrincipalDetailsService;
@@ -61,7 +61,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
     protected void configure(HttpSecurity http) throws Exception{
         
         http.authorizeRequests()
-                .antMatchers("/personas", "login")
+                .antMatchers("/persona", "login")
                 .hasRole("ADMIN")
                 .antMatchers("/personaN", "/persona", "/", "login")
                 .hasAnyRole("USER", "VENDOR", "ADMIN")
